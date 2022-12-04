@@ -11,16 +11,18 @@
   --filter-border-color: #eeeeee;
   --button-transparent: rgba(0, 0, 0, 0.15);
   --buttonactive: #188ce8;
-  --header-bottom-border: #ECECEC
+  --header-bottom-border: #ececec;
 }
 body {
   background-color: #fff;
   color: var(--basic-text-color);
   font-family: Roboto, sans-serif;
 }
+img {
+  display: block;
+}
 
 .flexible {
-  margin-left: 15px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -37,8 +39,8 @@ ul {
 
 .page-header {
   /* 	justify-content: flex-start; */
-/*   background-color: #ddd5d5; */
-  border-bottom:solid 1px;
+  /*   background-color: #ddd5d5; */
+  border-bottom: solid 1px;
   border-color: var(--header-bottom-border);
 }
 
@@ -47,10 +49,11 @@ ul {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  padding: 0 15px;
 }
 .section-rules {
   padding-top: 94px;
-  padding-bottom: 0px;
+  padding-bottom: 94px;
 }
 
 .section {
@@ -119,8 +122,8 @@ ul {
 }
 .link {
   display: block;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.2;
@@ -142,6 +145,7 @@ ul {
   display: flex;
   justify-content: flex-end;
   margin-right: 15px;
+  padding-left: 0px;
   align-items: center;
   font-weight: 500;
   line-height: 1.2;
@@ -152,8 +156,8 @@ ul {
 
 .menu-contacts-link {
   display: block;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--basic-text-color);
   text-decoration: none;
   font-weight: 500;
@@ -171,7 +175,8 @@ ul {
 }
 
 .contacts-transp {
-  padding: 0;
+  margin-top: 20px;
+  padding: 0 0;
   font-size: 14px;
   text-decoration: none;
   line-height: 1.2;
@@ -192,7 +197,7 @@ ul {
   color: var(--filter-link-color);
   cursor: pointer;
   text-decoration: none;
-  margin-top: 9px;
+  margin: 0;
 }
 
 .footer-contacts-link {
@@ -210,10 +215,16 @@ ul {
 .footer-contacts-link:hover,
 .footer-contacts-link:focus {
   display: inline-block;
-  margin-top: 9px;
   color: var(--logo-text-color);
 }
 
+.footer-items {
+  margin-top: 9px;
+}
+
+.footer-items:first-child {
+  margin-top: 0px;
+}
 /* INDEX STYLES стили Индекса*/
 .h1-header {
   font-weight: 900;
@@ -276,7 +287,7 @@ ul {
   cursor: pointer;
 }
 
-.h2 {
+.cards-name {
   font-size: 18px;
   color: var(--black-text-color);
 }
@@ -290,13 +301,18 @@ ul {
   /*   align-items: center; */
 }
 
+.team-info {
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .team {
   background-color: var(--team-bkg);
   color: var(--h3-text-color);
 }
 
 .team-h3 {
-	padding-top: 30px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -304,8 +320,7 @@ ul {
 }
 
 .team-p {
-	padding-top: 10px;
-	padding-bottom: 30px;
+  margin-top: 10px;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -341,11 +356,11 @@ ul {
 .filter-flex {
   display: flex;
   justify-content: center;
-  gap: 30px;/* 
+  gap: 8px; /* 
   padding-top: 94px; */
 }
 
-.filter-header-link {
+.cards-item-link {
   color: var(--h3-text-color);
   font-weight: 700;
   font-size: 18px;
@@ -353,21 +368,27 @@ ul {
   letter-spacing: 0.06em;
   text-decoration: none;
 }
-.filter-header {
-	flex-basis: 1170px;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 30px;
-	padding-top: 50px;
+.cards {
+  display: flex;
+  flex-basis: 1200px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+  padding-left: 0;
   list-style-type: none;
 }
 
-.filter-li {
-  width: 320px;
+.cards-item {
+  width: 370px;
   border: 1px solid;
   border-color: var(--filter-border-color);
 }
-.filter-p {
+.cards-block{
+padding: 20px 24px;
+}
+.cards-text {
+margin-top: 4px ;
   color: var(--basic-text-color);
   font-weight: 400;
   font-size: 16px;
@@ -402,6 +423,8 @@ ul {
 
 .filter-button:hover,
 .filter-button:focus {
+  margin: 2px;
+  padding: 6px 22px 6px 22px;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.63;
@@ -410,11 +433,12 @@ ul {
   cursor: pointer;
   border-style: hidden;
   border-radius: 4px;
-  margin: 2px;
-  padding: 6px 22px 6px 22px;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /*стили футера*/
-.footer-bckg {
+.footer-style {
+  padding: 60px 0;
   background-color: var(--footer-bkg-color);
 }
