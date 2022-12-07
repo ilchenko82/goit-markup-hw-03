@@ -25,6 +25,7 @@ img {
 .flexible {
   display: flex;
   justify-content: flex-start;
+  margin-right: auto;
   align-items: center;
 }
 
@@ -44,6 +45,17 @@ ul {
   border-color: var(--header-bottom-border);
 }
 
+.container-header-nav {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 0 15px;
+}
+
 .container {
   width: 1200px;
   margin-left: auto;
@@ -53,6 +65,7 @@ ul {
 }
 .section-rules {
   padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .section {
@@ -62,9 +75,8 @@ ul {
 	background-color: burlywood; */
 }
 
-.main-nav {
+. .main-nav {
   display: flex;
-  justify-content: space-between;
 }
 .black-logo {
   color: var(--black-text-color);
@@ -143,7 +155,8 @@ ul {
 .menu-contacts {
   display: flex;
   justify-content: flex-end;
-  margin-right: 15px;
+  margin-left: auto;
+  margin-right: 0px;
   padding-left: 0px;
   align-items: center;
   font-weight: 500;
@@ -174,7 +187,6 @@ ul {
 }
 
 .contacts-transp {
-  margin-top: 20px;
   padding: 0 0;
   font-size: 14px;
   text-decoration: none;
@@ -182,6 +194,10 @@ ul {
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
   list-style-type: none;
+}
+
+.addres-bottom {
+  margin-top: 20px;
 }
 
 .footer-contacts {
@@ -259,12 +275,16 @@ ul {
 
 /* what we do container */
 
-.what-we-do {
+.what-we-do-item {
   display: flex;
   justify-content: center;
   gap: 30px;
   margin: 50px 0 0 0;
   /*   align-items: center; */
+}
+
+.what-we-do {
+  padding-top: 0;
 }
 
 .blue-button {
@@ -383,11 +403,11 @@ ul {
   border: 1px solid;
   border-color: var(--filter-border-color);
 }
-.cards-block{
-padding: 20px 24px;
+.cards-block {
+  padding: 20px 24px;
 }
 .cards-text {
-margin-top: 4px ;
+  margin-top: 4px;
   color: var(--basic-text-color);
   font-weight: 400;
   font-size: 16px;
