@@ -12,6 +12,9 @@
   --button-transparent: rgba(0, 0, 0, 0.15);
   --buttonactive: #188ce8;
   --header-bottom-border: #ececec;
+  --social-network-basic-link: #AFB1B8;
+  --fotter-social-network-basic-link: rgba(255, 255, 255, 0.1);
+  --clients-bkg: #F5F5F5;
 }
 body {
   background-color: #fff;
@@ -38,12 +41,17 @@ ul {
   margin-bottom: 0;
 }
 
+* {
+	border: none;
+}
+
 .page-header {
   /* 	justify-content: flex-start; */
   /*   background-color: #ddd5d5; */
   border-bottom: solid 1px;
   border-color: var(--header-bottom-border);
 }
+
 
 .container-header-nav {
   display: flex;
@@ -83,11 +91,13 @@ ul {
 }
 
 .white-logo {
-  color: var(--filter-link-color);
+	font-style: normal;
+	color: var(--filter-link-color);
 }
 
 .logo {
   font-family: 'Raleway', sans-serif;
+  font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
@@ -101,6 +111,13 @@ ul {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+
+  background-image: linear-gradient(
+	to right, rgba(47, 48, 58, 0.4), 
+	rgba(47, 48, 58, 0.4)),
+    url(../images/hero.jpg);
+	 background-repeat: no-repeat;
+	 background-position: center;
 }
 
 .ul-nolist {
@@ -180,6 +197,15 @@ ul {
 .menu-contacts-link:hover,
 .menu-contacts-link:focus {
   color: var(--logo-text-color);
+  fill: var(--logo-text-color);
+}
+
+.icon-contacts{
+	display: inline-block;
+	margin-right: 10px;
+	position: relative;
+	fill: var(--basic-text-color);
+        top: 0.1em;
 }
 
 .menu-contacts .item + .item {
@@ -188,6 +214,7 @@ ul {
 
 .contacts-transp {
   padding: 0 0;
+  margin-top: 20px;
   font-size: 14px;
   text-decoration: none;
   line-height: 1.2;
@@ -201,6 +228,10 @@ ul {
 }
 
 .footer-contacts {
+	display: flex;
+	justify-content: flex-start;
+	align-content: flex-start;
+	gap: 30px ;
   text-align: left;
   padding-left: 15px;
 }
@@ -256,6 +287,17 @@ ul {
   justify-content: center;
   gap: 30px;
   /*   align-items: center; */
+}
+
+.our-rules-box{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 270px;
+	height: 120px;
+	background-color: var(--team-bkg) ;
+	border-radius: 4px;
+	margin-bottom: 30px;
 }
 
 .our-rules .item {
@@ -323,7 +365,7 @@ ul {
 .team-info {
   display: block;
   padding-top: 30px;
-  padding-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .team {
@@ -360,6 +402,34 @@ ul {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+
+.team-social-links {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	list-style: none;
+	gap: 10px;
+	padding-left: 0;
+	margin-bottom: 30px;
+}
+
+/* Social network button and icons */
+
+.social-button {
+	display: block;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	padding: 12px;
+	background-color: var(--filter-link-color);
+	fill: var(--social-network-basic-link);
+}
+
+.social-button:hover {
+	background-color: var(--logo-text-color);
+	fill: var(--filter-link-color);
+}
+
 /* PORTFOLIO STYLES стили Портфолио*/
 /*Стили main*/
 .h2-portfolio {
@@ -456,8 +526,68 @@ ul {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+/* OUR CLIENTS */
+
+.clients{
+	background-color: var(--filter-link-color);
+}
+
+.clients-item{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 170px;
+	height:92px;
+	border: 1px solid var(--social-network-basic-link);
+	border-radius: 4px;
+
+	
+}
+.clients-list{
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+	margin-top: 50px;
+}
+
 /*стили футера*/
+
+
 .footer-style {
-  padding: 60px 0;
+	display: flex;
+	justify-content:flex-start;
+	align-items:flex-start;
+	padding: 60px 0;
   background-color: var(--footer-bkg-color);
+}
+
+.footer-h2{
+color: var(--filter-link-color);
+font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+margin-bottom: 20px;
+}
+
+.footer-social-link{
+	margin-top: 32px;
+	margin-left: 70px;
+}
+
+.footer-social-button {
+	display: block;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	padding: 12px;
+	background-color: var(--fotter-social-network-basic-link);
+	fill: var(--filter-link-color);
+}
+
+.footer-social-button:hover {
+	background-color: var(--logo-text-color);
+	fill: var(--filter-link-color);
 }
